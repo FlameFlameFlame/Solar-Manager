@@ -368,19 +368,21 @@ void loop()
     if (secondPassed)
     {
       secondPassed = false;
+
+      // stop radiating
+      if (t.GetMinutes() == 0 && t.GetSeconds() == 0)
+      {
+        relay.TurnOff();
+        SetCursor(lcd, cur);
+        lcd.print("Done!");
+        delay(1000);
+        state = SETTING_TIME;
+      }
+
       t--;
       SetCursor(lcd, cur);
       lcd.print(t.AsString());
       Serial.println(t.AsString());
-    }
-    // stop radiating
-    if (t.GetMinutes() == 0 && t.GetSeconds() == 0)
-    {
-      relay.TurnOff();
-      SetCursor(lcd, cur);
-      lcd.print("Done!");
-      delay(1000);
-      state = SETTING_TIME;
     }
     break;
   }
