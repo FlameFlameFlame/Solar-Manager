@@ -12,8 +12,8 @@
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug",
-            "executable": "c:/Users/flame/Documents/GitHub/uwb311/Solar-Manager/.pio/build/leonardo/firmware.elf",
-            "toolchainBinDir": "C:/Users/flame/.platformio/packages/toolchain-atmelavr/bin",
+            "executable": "/home/timur/Documents/src/Solar-Manager/.pio/build/leonardo/firmware.elf",
+            "toolchainBinDir": "/home/timur/.platformio/packages/toolchain-atmelavr/bin",
             "preLaunchTask": {
                 "type": "PlatformIO",
                 "task": "Pre-Debug"
@@ -24,8 +24,8 @@
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug (skip Pre-Debug)",
-            "executable": "c:/Users/flame/Documents/GitHub/uwb311/Solar-Manager/.pio/build/leonardo/firmware.elf",
-            "toolchainBinDir": "C:/Users/flame/.platformio/packages/toolchain-atmelavr/bin",
+            "executable": "/home/timur/Documents/src/Solar-Manager/.pio/build/leonardo/firmware.elf",
+            "toolchainBinDir": "/home/timur/.platformio/packages/toolchain-atmelavr/bin",
             "internalConsoleOptions": "openOnSessionStart"
         }
     ]

@@ -322,6 +322,18 @@ void loop()
     prevMillis = millis();
   }
 
+  // stop
+  if (IsButtonPressed(BUTTON_PIN) && (state == WARMING || state == RADIATING))
+  {
+    state = SETTING_TIME;
+    relay.TurnOff();
+    cur.line = 0;
+    cur.row = 0;
+    SetCursor(lcd, cur);
+    lcd.println("Abort");
+    delay(1000);
+  }
+
   // check state of a device, decide what to do
   switch (state)
   {
