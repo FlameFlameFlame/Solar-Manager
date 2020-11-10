@@ -329,8 +329,10 @@ void loop()
     relay.TurnOff();
     cur.line = 0;
     cur.row = 0;
+    ClearLine(0, lcd);
+    ClearLine(1, lcd);
     SetCursor(lcd, cur);
-    lcd.println("Abort");
+    lcd.println("     Abort      ");
     delay(1000);
   }
 
@@ -344,7 +346,7 @@ void loop()
       cur.line = 0;
       cur.row = 0;
       SetCursor(lcd, cur);
-      lcd.println("Set time        ");
+      lcd.println("    Set time    ");
       cur.line = 1;
       ClearLine(1, lcd);
       SetCursor(lcd, cur);
