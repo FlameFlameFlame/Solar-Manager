@@ -30,3 +30,10 @@
 *.exe
 *.out
 *.app
+
+# Platformio
+.pio
+
+# VSCode
+.vscode
+.vscode/.BROWSE.C_CPP.DB
